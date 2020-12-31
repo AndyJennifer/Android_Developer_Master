@@ -1,0 +1,40 @@
+{
+    "title": "Android Developer Master",
+    "author": "AndyJennifer",
+    "description": "select * from learn",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "AndyJennifer": "https://andyjennifer.com"
+        }
+    },
+    "plugins": [
+        "-sharing",
+        "splitter",
+        "expandable-chapters-small",
+        "github",
+        "sharing-plus",
+        "code"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/AndyJennifer"
+        },
+        "github-buttons": {
+            "buttons": [{
+                "user": "AndyJennifer",
+                "repo": "glory",
+                "type": "star",
+                "size": "small",
+                "count": true
+                }
+            ]
+        }
+ 
+    }
+}
