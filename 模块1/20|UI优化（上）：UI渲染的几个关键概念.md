@@ -41,7 +41,7 @@ UI 优化究竟指的是什么呢？我认为所谓的 UI 优化，应该包含�
 
 ### 2. CPU 与 GPU
 
-除了屏幕，UI 渲染还依赖两个核心的硬件：CPU 与 GPU。UI 组件在绘制到屏幕之前，都需要经过 Rasterization（[栅格化](https://www.zhihu.com/question/29163054)）操作，而栅格化操作又是一个非常耗时的操作。GPU（Graphic Processing Unit ）也就是图形处理器，它主要用于处理图形运算，可以帮助我们加快栅格化操作。
+除了屏幕，UI 渲染还依赖两个核心的硬件：CPU 与 GPU。UI 组件在绘制到屏幕之前，都需要经过 Rasterization（[栅格化](https://www.zhihu.com/question/29163054)-就是把矢量图形转化成像素点儿的过程）操作，而栅格化操作又是一个非常耗时的操作。GPU（Graphic Processing Unit ）也就是图形处理器，它主要用于处理图形运算，可以帮助我们加快栅格化操作。
 
 ![138](../img/模块1/138.png)
 
@@ -49,7 +49,7 @@ UI 优化究竟指的是什么呢？我认为所谓的 UI 优化，应该包含�
 
 ### 3. OpenGL 与 Vulkan
 
-对于硬件绘制，我们通过调用 OpenGL ES 接口利用 GPU 完成绘制。[OpenGL](https://developer.android.com/guide/topics/graphics/opengl)是一个跨平台的图形 API，它为 2D/3D 图形处理硬件指定了标准软件接口。而 OpenGL ES 是 OpenGL 的子集，专为嵌入式设备设计。
+对于硬件绘制，我们通过调用 OpenGL ES 接口利用 GPU 完成绘制。[OpenGL](https://developer.android.com/guide/topics/graphics/opengl)是一个跨平台的图形 API，它为 2D/3D 图形处理硬件指定了标准软件接口。而 [OpenGL ES](https://developer.android.google.cn/guide/topics/graphics/opengl?hl=zh_cn) 是 OpenGL 的子集，专为嵌入式设备设计。
 
 在官方[硬件加速的文档](https://developer.android.com/guide/topics/graphics/hardware-accel)中，可以看到很多 API 都有相应的 Android API level 限制。
 
@@ -145,7 +145,7 @@ Project Butter 主要包含两个组成部分，一个是 VSYNC，一个是 Trip
 
 ![148](../img/模块1/148.png)
 
-对于 VSYNC 信号和 Triple Buffering 更详细的介绍，可以参考《Android Project Butter 分析》。
+对于 VSYNC 信号和 Triple Buffering 更详细的介绍，可以参考[《Android Project Butter 分析》](https://blog.csdn.net/innost/article/details/8272867)。
 
 #### 数据测量
 
@@ -199,8 +199,8 @@ UI 主线程“既当爹又当妈”，任务过于繁重。如果整个渲染�
 
 Android 渲染架构非常庞大，而且演进得也非常快。如果你还有哪些不理解的地方，可以进一步阅读下面的参考资料：
 
-2018 Google I/O：[Drawn out: how Android renders](https://www.youtube.com/watch?v=zdQRIYOST64)
-官方文档：[Android 图形架构](https://source.android.com/devices/graphics)
-浏览器渲染：[一颗像素的诞生](https://mp.weixin.qq.com/s/QoFrdmxdRJG5ETQp5Ua3-A)
-[Android 屏幕绘制机制及硬件加速](https://blog.csdn.net/qian520ao/article/details/81144167)
-[Android 性能优化之渲染篇](http://hukai.me/android-performance-render/)
+- 2018 Google I/O：[Drawn out: how Android renders](https://www.youtube.com/watch?v=zdQRIYOST64)
+- 官方文档：[Android 图形架构](https://source.android.com/devices/graphics)
+- 浏览器渲染：[一颗像素的诞生](https://mp.weixin.qq.com/s/QoFrdmxdRJG5ETQp5Ua3-A)
+- [Android 屏幕绘制机制及硬件加速](https://blog.csdn.net/qian520ao/article/details/81144167)
+- [Android 性能优化之渲染篇](http://hukai.me/android-performance-render/)
